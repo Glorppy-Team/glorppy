@@ -1,0 +1,29 @@
+{
+  "name": "Glorppy",
+  "version": "1.0.0",
+  "description": "A cool discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Misticalkai",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^7.10.0",
+    "discord-html-transcripts": "^3.2.0",
+    "discord.js": "^14.27.0",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "git": "^0.1.5",
+    "pino": "^10.3.1",
+    "prisma": "^7.10.0",
+    "stripe": "^22.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^10.11.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.9"
+  }
+}
