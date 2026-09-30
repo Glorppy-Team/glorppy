@@ -1,7 +1,5 @@
 {
-  "scripts": {
-    "bot": "node apps/bot/src/index.js",
-    "bot:dev": "nodemon apps/bot/src/index.js",
-    "deploy": "node apps/bot/src/deploy-commands.js"
-  }
+  "name": "glorppy-bot",
+  "version": "1.0.0",
+  "private": true
 }

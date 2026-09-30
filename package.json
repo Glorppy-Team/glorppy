@@ -4,7 +4,9 @@
   "description": "A cool discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bot": "node apps/bot/src/index.js",
+    "bot:dev": "nodemon apps/bot/src/index.js",
+    "deploy": "node apps/bot/src/deploy-commands.js"
   },
   "keywords": [],
   "author": "Misticalkai",
