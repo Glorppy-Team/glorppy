@@ -4,6 +4,7 @@
   "description": "A cool discord bot",
   "main": "index.js",
   "scripts": {
+    "start": "node apps/bot/src/index.js",
     "bot": "node apps/bot/src/index.js",
     "bot:dev": "nodemon apps/bot/src/index.js",
     "deploy": "node apps/bot/src/deploy-commands.js"
