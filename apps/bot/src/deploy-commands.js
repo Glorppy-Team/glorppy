@@ -6,9 +6,11 @@ const {
 } = require("discord.js");
 
 const pingCommand = require("./commands/ping");
+const ticketCommand = require("./commands/ticket");
 
 const commands = [
-    pingCommand.data.toJSON()
+    pingCommand.data.toJSON(),
+    ticketCommand.data.toJSON()
 ];
 
 const rest = new REST({ version: "10" })
