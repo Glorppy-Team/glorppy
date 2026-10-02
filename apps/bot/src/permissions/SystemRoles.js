@@ -1,5 +1,8 @@
-require("dotenv").config({
-    path: ".roleenv"
+const path = require("path");
+const dotenv = require("dotenv");
+
+dotenv.config({
+    path: path.resolve(__dirname, "../../../../.roleenv")
 });
 
 console.log("OWNER IDS:", process.env.GLORPPY_OWNER_IDS);
