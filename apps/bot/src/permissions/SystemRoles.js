@@ -60,12 +60,6 @@ const SystemRoles = {
             ...Object.values(Permissions.Logging),
             ...Object.values(Permissions.Automation)
         ]
-    },
-
-    EVERYONE: {
-        name: "Everyone",
-        users: null,
-        unrestricted: true
     }
 };
 
