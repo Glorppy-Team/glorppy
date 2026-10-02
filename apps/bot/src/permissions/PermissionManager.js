@@ -8,12 +8,22 @@ class PermissionManager {
             return false
         }
 
-        return role.users.includes(userId);
+        if (role.unrestricted) {
+            return true;
+        }
+
+        return role.users?.includes(userId) ?? false;
     }
 
     static getSystemRole(userId) {
         return Object.entries(SystemRoles)
-            .filter(([_, role]) => role.users.includes(userId))
+            .filter(([_, role]) => {
+                if (role.unrestricted) {
+                    return true;
+                }
+
+                return role.users?.includes(userId) ?? false;
+            })
             .map(([roleKey]) => roleKey);
     }
 
