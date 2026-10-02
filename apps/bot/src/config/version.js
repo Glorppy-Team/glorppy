@@ -1,0 +1,6 @@
+const version = "26.0.0-alpha.1";
+
+
+module.exports = { 
+    version 
+};

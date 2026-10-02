@@ -1,5 +1,5 @@
 module.exports = (client) => {
-    client.once("ready", () => {
+    client.once("clientReady", () => {
         console.log(`Glorppy is online as ${client.user.tag}`);
 
         client.user.setPresence({
