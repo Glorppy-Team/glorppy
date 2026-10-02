@@ -84,8 +84,6 @@ const Permissions = {
         Unclaim: "Tickets.Unclaim",
         AddUser: "Tickets.AddUser",
         RemoveUser: "Tickets.RemoveUser",
-        Claim: "Tickets.Claim",
-        Unclaim: "Tickets.Unclaim",
         Lock: "Tickets.Lock",
         Unlock: "Tickets.Unlock",
         Rename: "Tickets.Rename",
