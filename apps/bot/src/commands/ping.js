@@ -3,7 +3,7 @@ const {
 } = require('discord.js');
 
 const PermissionManager = require("../permissions/PermissionManager");
-const Permissions = require("../permissions/Permissions");
+const Permissions = require("../permissions/permissions");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -19,7 +19,7 @@ module.exports = {
         if (!hasPermission) {
             return interaction.reply({
                 content: "❌ You do not have permission to use this command.",
-                ephemeral: true
+                flags: 64
             });
         }
 
