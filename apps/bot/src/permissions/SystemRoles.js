@@ -2,6 +2,10 @@ require("dotenv").config({
     path: ".roleenv"
 });
 
+console.log("OWNER IDS:", process.env.GLORPPY_OWNER_IDS);
+console.log("DEVELOPER IDS:", process.env.GLORPPY_DEVELOPER_IDS);
+console.log("ADMIN IDS:", process.env.GLORPPY_ADMIN_IDS);
+
 const Permissions = require("./permissions");
 
 const parseIds = (value) => {
