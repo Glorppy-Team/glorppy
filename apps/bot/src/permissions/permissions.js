@@ -43,7 +43,7 @@ const Permissions = {
             Roles: "Manage.Glorppy.Roles",
             Commands: "Manage.Glorppy.Commands",
             Logging: "Manage.Glorppy.Logging",
-            Ping: "Glorppy.Ping",
+            Ping: "Manage.Glorppy.Ping",
         }
     },
 
@@ -188,4 +188,6 @@ const Permissions = {
         Override: "Owner.Override",
         Transfer: "Owner.Transfer",
     }
-}
+};
+
+module.exports = Permissions;
