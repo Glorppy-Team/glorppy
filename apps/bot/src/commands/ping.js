@@ -3,7 +3,7 @@ const {
 } = require('discord.js');
 
 const PermissionManager = require("../permissions/PermissionManager");
-const Permissions = require("../permissions/permissions");
+const Permissions = require("../permissions/Permissions");
 
 module.exports = {
     data: new SlashCommandBuilder()
