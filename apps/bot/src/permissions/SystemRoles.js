@@ -1,19 +1,8 @@
-const fs = require("fs");
 const path = require("path");
 const dotenv = require("dotenv");
 
-const roleEnvPath = path.resolve("/home/container/.roleenv");
-
-console.log("ROLEENV PATH:", roleEnvPath);
-console.log("ROLEENV EXISTS:", fs.existsSync(roleEnvPath));
-
-if (fs.existsSync(roleEnvPath)) {
-    console.log("ROLEENV CONTENT:");
-    console.log(fs.readFileSync(roleEnvPath, "utf8"));
-}
-
 dotenv.config({
-    path: roleEnvPath
+    path: path.resolve("/home/container/.roleenv")
 });
 
 console.log("OWNER IDS:", process.env.GLORPPY_OWNER_IDS);
