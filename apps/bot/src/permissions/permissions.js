@@ -190,4 +190,4 @@ const Permissions = {
     }
 };
 
-module.exports = Permissions;
+module.exports = Permissions; // Fixed
