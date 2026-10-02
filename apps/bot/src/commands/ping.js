@@ -13,7 +13,7 @@ module.exports = {
     async execute(interaction) {
         const hasPermission = PermissionManager.hasPermission(
             interaction.user.id,
-            Permissions.Manage.Glorppy.Ping // Glorrpy Ping Permission
+            Permissions.Manage.Glorppy.Ping
         );
 
         if (!hasPermission) {
