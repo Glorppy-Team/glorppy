@@ -20,23 +20,38 @@ const parseIds = (value) => {
         .filter(Boolean);
 };
 
+const collectPermissions = (object) => {
+    const permissions = [];
+
+    for (const value of Object.values(object)) {
+        if (typeof value === "string") {
+            permissions.push(value);
+        } else if (value && typeof value === "object") {
+            permissions.push(...collectPermissions(value));
+        }
+    }
+
+    return permissions;
+};
+
 const SystemRoles = {
     OWNER: {
         name: "Owner",
         users: parseIds(process.env.GLORPPY_OWNER_IDS),
 
         Permissions: [
-            ...Object.values(Permissions.Discord),
-            ...Object.values(Permissions.Manage.Glorppy),
-            ...Object.values(Permissions.Grant.Glorppy),
-            ...Object.values(Permissions.Moderation),
-            ...Object.values(Permissions.Tickets),
-            ...Object.values(Permissions.Leveling),
-            ...Object.values(Permissions.Linking),
-            ...Object.values(Permissions.Logging),
-            ...Object.values(Permissions.Automation),
-            ...Object.values(Permissions.Developer),
-            ...Object.values(Permissions.Owner)
+            ...collectPermissions(Permissions.Discord),
+            ...collectPermissions(Permissions.Manage.Glorppy),
+            ...collectPermissions(Permissions.Grant.Glorppy),
+            ...collectPermissions(Permissions.Moderation),
+            ...collectPermissions(Permissions.Tickets),
+            ...collectPermissions(Permissions.Leveling),
+            ...collectPermissions(Permissions.Linking),
+            ...collectPermissions(Permissions.Logging),
+            ...collectPermissions(Permissions.Automation),
+            ...collectPermissions(Permissions.Developer),
+            ...collectPermissions(Permissions.Owner),
+            ...collectPermissions(Permissions.Everyone)
         ]
     },
 
@@ -45,7 +60,7 @@ const SystemRoles = {
         users: parseIds(process.env.GLORPPY_DEVELOPER_IDS),
 
         Permissions: [
-            ...Object.values(Permissions.Developer)
+            ...collectPermissions(Permissions.Developer)
         ]
     },
 
@@ -54,11 +69,22 @@ const SystemRoles = {
         users: parseIds(process.env.GLORPPY_ADMIN_IDS),
 
         Permissions: [
-            ...Object.values(Permissions.Moderation),
-            ...Object.values(Permissions.Tickets),
-            ...Object.values(Permissions.Leveling),
-            ...Object.values(Permissions.Logging),
-            ...Object.values(Permissions.Automation)
+            ...collectPermissions(Permissions.Moderation),
+            ...collectPermissions(Permissions.Tickets),
+            ...collectPermissions(Permissions.Leveling),
+            ...collectPermissions(Permissions.Logging),
+            ...collectPermissions(Permissions.Automation)
+        ]
+    },
+
+    EVERYONE: {
+        name: "Everyone",
+        users: null,
+        unrestricted: true,
+
+        Permissions: [
+            Permissions.Everyone.DiscordEveryone,
+            Permissions.Everyone.GlorppyEveryone
         ]
     }
 };
