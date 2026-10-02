@@ -43,6 +43,7 @@ const Permissions = {
             Roles: "Manage.Glorppy.Roles",
             Commands: "Manage.Glorppy.Commands",
             Logging: "Manage.Glorppy.Logging",
+            Ping: "Glorppy.Ping",
         }
     },
 
