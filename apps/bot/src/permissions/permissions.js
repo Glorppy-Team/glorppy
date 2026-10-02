@@ -3,6 +3,7 @@ const { Events } = require("discord.js");
 const Permissions = {
     Discord: {
         Administrator: "Discord.Administrator",
+        Everyone: "Discord.Everyone",
 
         View: {
             Channel: "Discord.View.Channel",
@@ -34,7 +35,13 @@ const Permissions = {
         }
     },
 
+    Everyone: {
+        DiscordEveryone: "Everyone.Discord.Everyone",
+        GlorppyEveryone: "Everyone.Glorppy.Everyone"
+    },
+
     Manage: {
+
         Glorppy: {
             Server: "Manage.Glorppy.Server",
             Settings: "Manage.Glorppy.Settings",
@@ -190,4 +197,4 @@ const Permissions = {
     }
 };
 
-module.exports = Permissions; // Fixed
+module.exports = Permissions;

@@ -49,7 +49,7 @@ const SystemRoles = {
         ]
     },
 
-    ADMIN:{
+    ADMIN: {
         name: "Admin",
         users: parseIds(process.env.GLORPPY_ADMIN_IDS),
 
@@ -60,7 +60,13 @@ const SystemRoles = {
             ...Object.values(Permissions.Logging),
             ...Object.values(Permissions.Automation)
         ]
+    },
+
+    EVERYONE: {
+        name: "Everyone",
+        users: null,
+        unrestricted: true
     }
 };
 
-module.exports = SystemRoles; // Fixed
+module.exports = SystemRoles;
