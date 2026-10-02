@@ -5,7 +5,7 @@ module.exports = (client) => {
         client.user.setPresence({
             activities: [
                 {
-                    name: "In development (Progress 3%/100%)",
+                    name: "In development (Progress 5%/100%)",
                     type: 0
                 }
             ],
